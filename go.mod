@@ -1,3 +1,3 @@
-module github.com/backend-library
+module github.com/ppmkh2sby/backend-library
 
 go 1.20
