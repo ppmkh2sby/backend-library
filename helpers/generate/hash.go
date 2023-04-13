@@ -12,10 +12,10 @@ func HashPassword(password string) (string, error) {
 }
 
 // CheckPasswordAndHash is function to check between user's password and hash password from database
-func CheckPasswordAndHash(password, hash string) (bool, error) {
+func CheckPasswordAndHash(password, hash string) error {
 	err := bcrypt.CompareHashAndPassword([]byte(hash), []byte(password))
 	if err != nil {
-		return false, err
+		return err
 	}
-	return true, nil
+	return nil
 }
